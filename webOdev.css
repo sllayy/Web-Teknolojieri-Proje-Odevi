@@ -1,0 +1,19 @@
+/* Navbar arka plan rengi */
+
+    .navbar {
+        background: linear-gradient(to right, #0f0974, #780f0f); /* Kırmızıdan maviye doğru bir geçiş */
+    }
+    
+
+
+/* Navbar metin rengleri */
+.navbar-brand,
+.navbar-nav .nav-link {
+    transition: color 0.3s, font-size 0.3s;
+    color: #ffffff; /* Başlangıç rengi */
+}
+
+/* Navbar linklerin üzerine gelindiğindeki arka plan rengi */
+nav ul li a:hover {
+    color: #85b5d7; /* Hover rengi */
+    font-size: 1.2em; /* Hover boyutu */}
