@@ -1,23 +1,25 @@
-// Anasayfa linkine tıklama olayını dinle
-document.querySelector('.navbar-brand').addEventListener('click', function(event) {
-    // Sayfanın yeniden yüklenmesini sağla
-    window.location.reload();
-});
-
-// Gece modu özelliğini kontrol etmek için bir fonksiyon
-function toggleDarkMode() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
+document.addEventListener('DOMContentLoaded', function() {
+    // Sayfa yüklendiğinde oturum kontrolü yapılacak
+    if (!sessionStorage.getItem('loggedIn')) {
+        window.location.href = 'login.html'; // Eğer oturum yoksa, kullanıcıyı giriş sayfasına yönlendir
+    }
     
-    // Gece modunu yerel depolamaya kaydetme
-    var darkModeEnabled = element.classList.contains("dark-mode");
-    localStorage.setItem("darkMode", darkModeEnabled ? "enabled" : "disabled");
-}
-
-// Sayfa yüklendiğinde gece modunu kontrol etme
-document.addEventListener("DOMContentLoaded", function() {
-    var darkMode = localStorage.getItem("darkMode");
-    if (darkMode === "enabled") {
-        document.body.classList.add("dark-mode");
+    // Giriş formunun gönderilmesi olayını dinle
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+        
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+        
+            if (username === 'admin' && password === 'password') {
+                sessionStorage.setItem('loggedIn', true); // Oturum bilgisini sakla
+                window.location.href = 'webOdev.html'; // Doğru kullanıcı adı ve şifreyle anasayfaya yönlendir
+            } else {
+                document.getElementById('errorMessage').innerText = 'Kullanıcı adı veya şifre yanlış';
+            }
+        });
     }
 });
+
