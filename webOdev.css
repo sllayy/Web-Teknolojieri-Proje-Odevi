@@ -1,19 +1,81 @@
 /* Navbar arka plan rengi */
-
-    .navbar {
-        background: linear-gradient(to right, #0f0974, #780f0f); /* Kırmızıdan maviye doğru bir geçiş */
-    }
-    
-
+.navbar {
+    background: linear-gradient(to right, #7d1c1c, #340b84); /* KÄ±rmÄ±zÄ±dan maviye doÄŸru bir geÃ§iÅŸ */
+}
 
 /* Navbar metin rengleri */
 .navbar-brand,
 .navbar-nav .nav-link {
     transition: color 0.3s, font-size 0.3s;
-    color: #ffffff; /* Başlangıç rengi */
+    color: #ffffff; /* BaÅŸlangÄ±Ã§ rengi */
 }
 
-/* Navbar linklerin üzerine gelindiğindeki arka plan rengi */
-nav ul li a:hover {
+/* Navbar linklerin Ã¼zerine gelindiÄŸindeki arka plan rengi */
+.navbar-nav .nav-link:hover {
     color: #85b5d7; /* Hover rengi */
-    font-size: 1.2em; /* Hover boyutu */}
+    font-size: 1.2em; /* Hover boyutu */
+}
+
+/* Body arka plan rengi */
+body {
+    background: linear-gradient(to right, #7d1c1c, #340b84); /* KÄ±rmÄ±zÄ±dan maviye doÄŸru bir geÃ§iÅŸ */
+}
+
+/* Footer arka plan rengi */
+footer {
+    background: linear-gradient(to right, #7d1c1c, #340b84); /* KÄ±rmÄ±zÄ±dan maviye doÄŸru bir geÃ§iÅŸ */
+    color: #ffffff; /* Metin rengi */
+}
+.iletisim-sayfasi {
+    background: linear-gradient(to right, #7d1c1c, #340b84); /* KÄ±rmÄ±zÄ±dan maviye doÄŸru bir geÃ§iÅŸ */
+}
+/* TÃ¼m metinleri beyaz yap */
+body,
+.navbar-brand,
+.navbar-nav .nav-link,
+footer {
+    color: white !important;
+}
+.carousel-item img {
+    max-width: 300%; /* Resimlerin maksimum geniÅŸliÄŸini %100 olarak ayarlar */
+    max-height: 300px; /* Resimlerin maksimum yÃ¼ksekliÄŸini 300 piksel olarak ayarlar */
+    object-fit: cover; /* Resmi istenen boyutta kÄ±rpmak iÃ§in */
+}
+.login-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
